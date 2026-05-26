@@ -9,7 +9,7 @@ function Navbar () {
     };
     return (
         <>
-            <div className='px-10  hidden sm:flex justify-between items-center  shadow-2xl fixed top-0 left-0 right-0 z-50 bg-slate-900/80 backdrop-blur-md border-b border-slate-800 text-slate-200 font-medium'>
+            <div className='px-10  hidden sm:flex justify-between items-center  shadow-2xl fixed top-0 left-0 right-0 z-50 bg-slate-900 backdrop-blur-md border-b border-slate-800 text-slate-200 font-medium'>
                 <div >
                     <NavLink>
                         <img src="/ChatGPT Image May 23, 2026, 07_17_18 PM.png" alt="Name logo" className='h-12 w-30' />
