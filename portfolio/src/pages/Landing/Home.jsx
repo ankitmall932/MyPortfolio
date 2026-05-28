@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom';
 
 function Home () {
     return (
-        <div className='w-full  h-screen flex lg:flex-row flex-col-reverse  lg:gap-5 gap-3 '>
+        <div className='w-full  h-full flex lg:flex-row flex-col-reverse  lg:gap-5 gap-3 py-10'>
             <div className='lg:w-1/2 w-full h-full flex flex-col sm:gap-10 gap-5 justify-center items-center '>
                 <div className='bg-slate-900 text-cyan-400 border border-slate-800 sm:font-bold font-semibold sm:text-4xl text-2xl px-5 py-2 rounded mt-5 shadow-[0_0_25px_rgba(34,211,238,0.15)]'>Full Stack Developer</div>
                 <div className='bg-slate-900 text-cyan-400 border border-slate-800 sm:font-bold font-semibold sm:text-4xl text-2xl px-5 py-2 rounded'> Building Modern Web Applications</div>
@@ -14,7 +14,7 @@ function Home () {
                 </div>
             </div>
             <div className='lg:w-1/2 w-full  lg:h-full h-full flex justify-center items-center'>
-                <img src="/Ankit Mall.jpeg" alt="" className='object-cover sm:h-80 md:h-100 lg:h-120 xl:h-150 h-70 sm:w-80 md:w-100  lg:w-120 xl:w-150 w-70  rounded-full shadow-2xl lg:mt-0 mt-10' />
+                <img src="/Ankit Mall.jpeg" alt="" className='object-cover sm:h-80 md:h-100 lg:h-120 xl:h-150 h-75 sm:w-80 md:w-100  lg:w-120 xl:w-150 w-75  rounded-full shadow-2xl ' />
             </div>
         </div>
     );
