@@ -13,8 +13,8 @@ function Home () {
                     <NavLink to='https://github.com/ankitmall932' className='border border-slate-700 text-slate-100 font-semibold hover:bg-slate-800 px-5 py-3 rounded-r hover:scale-105 transition-all duration-300'>GitHub</NavLink>
                 </div>
             </div>
-            <div className='lg:w-1/2 w-full  lg:h-full h-70 flex justify-center items-center'>
-                <img src="/Ankit Mall.jpeg" alt="" className='object-cover sm:h-80 md:h-100 lg:h-120 xl:h-150 h-60 sm:w-80 md:w-100  lg:w-120 xl:w-150 w-60  rounded-full shadow-2xl lg:mt-0 mt-20' />
+            <div className='lg:w-1/2 w-full  lg:h-full h-full flex justify-center items-center'>
+                <img src="/Ankit Mall.jpeg" alt="" className='object-cover sm:h-80 md:h-100 lg:h-120 xl:h-150 h-70 sm:w-80 md:w-100  lg:w-120 xl:w-150 w-70  rounded-full shadow-2xl lg:mt-0 mt-10' />
             </div>
         </div>
     );
