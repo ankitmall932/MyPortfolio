@@ -7,7 +7,7 @@ function About () {
         <div className='section-wrap'>
             <section className='grid items-end gap-10 border-b border-white/10 pb-16 lg:grid-cols-[1.2fr_.8fr]'>
                 <div>
-                    <div className='eyebrow mb-7 flex items-center gap-2'><span className='h-2 w-2 bg-[#e68b5e]'></span> About the studio</div>
+                    <div className='eyebrow mb-7 flex items-center gap-2'><span className='h-2 w-2 bg-[#e68b5e]'></span> About Ankit</div>
                     <h1 className='display max-w-4xl font-extrabold'>Code with clarity. <span className='accent'>Design with feeling.</span></h1>
                     <p className='muted mt-8 max-w-2xl text-lg leading-8'>I am Ankit, a developer and creative editor who likes working where technology meets visual storytelling. I build useful web experiences, then give them the polish and personality that makes them memorable.</p>
                     <div className='mt-8 flex flex-wrap gap-x-6 gap-y-3 text-sm text-[#756f69]'><span className='flex items-center gap-2'><span className='h-2 w-2 rounded-full bg-[#91b49b]'></span> Gorakhpur, India</span><span>Available for select projects</span></div>

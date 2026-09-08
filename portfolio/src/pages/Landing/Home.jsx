@@ -17,7 +17,7 @@ function Home () {
                     </div>
                     <div className='mt-14 flex flex-wrap items-center gap-x-2 gap-y-3 text-sm text-[#756f69]'><MapPin size={ 16 } className='text-[#e68b5e]' /> Gorakhpur, India <span className='mx-2 text-[#4c4844]'>/</span> Building for the web since 2022 <span className='mx-2 text-[#4c4844]'>/</span> Graphic design + video editing</div>
                 </div>
-                <div className='relative mx-auto w-full max-w-md'>
+                <div className='order-first relative mx-auto w-full max-w-md lg:order-0'>
                     <div className='absolute -inset-4 border border-[#e68b5e]/20'></div>
                     <img src="/Ankit Mall.jpeg" alt="Ankit Mall" className='relative aspect-4/5 w-full object-cover grayscale-20' />
                     <div className='absolute -bottom-5 -left-5 bg-[#91b49b] px-4 py-3 text-sm font-bold text-[#17110e]'>Design-minded<br />developer</div>

@@ -14,7 +14,7 @@ function Navbar () {
             <div className='hidden sm:flex fixed top-0 left-0 right-0 z-50 items-center justify-between border-b border-white/10 bg-[#11100f]/90 px-[clamp(1.25rem,5vw,5rem)] py-4 backdrop-blur-md'>
                 <NavLink to='/' className='flex items-center gap-3'>
                     <span className='flex h-9 w-9 items-center justify-center bg-[#e68b5e] font-bold text-[#17110e]'>AM</span>
-                    <span className='font-bold tracking-tight'>Ankit Mall<span className='text-[#e68b5e]'>.</span></span>
+                    <span className='font-bold tracking-tight'>Ankit Mall</span>
                 </NavLink>
                 <div className='flex items-center gap-8'>
                     <NavLink className={ isActive } to='/'>Home</NavLink>
@@ -25,21 +25,20 @@ function Navbar () {
                 </div>
             </div>
             <div className='flex sm:hidden fixed top-0 right-0 left-0 z-50 items-center justify-between border-b border-white/10 bg-[#11100f]/95 px-4 py-4 backdrop-blur-md'>
-                <NavLink to='/' className='flex items-center gap-3 font-bold'><span className='flex h-9 w-9 items-center justify-center bg-[#e68b5e] text-sm text-[#17110e]'>AM</span>Ankit Mall<span className='text-[#e68b5e]'>.</span></NavLink>
+                <NavLink to='/' className='flex items-center gap-3 font-bold'><span className='flex h-9 w-9 items-center justify-center bg-[#e68b5e] text-sm text-[#17110e]'>AM</span>Ankit Mall</NavLink>
                 <div>
                     <button aria-label='Open navigation' onClick={ () => setIsOpen(true) } className='text-[#e68b5e]'><Menu /></button>
-                    <div onClick={ () => setIsOpen(false) } className={ `fixed inset-0 bg-[#11100f]/80 backdrop-blur-md transition-opacity duration-300 ${ isOpen ? 'opacity-100' : 'pointer-events-none opacity-0' }` }>
-                        <div onClick={ event => event.stopPropagation() } className={ `fixed right-0 top-0 z-50 h-full w-[min(21rem,88vw)] border-l border-white/10 bg-[#1d1b19] p-6 shadow-2xl transition-transform duration-300 ${ isOpen ? 'translate-x-0' : 'translate-x-full' }` }>
-                            <div className='flex justify-end'><button aria-label='Close navigation' onClick={ () => setIsOpen(false) } className='text-[#e68b5e]'><X /></button></div>
-                            <div className='mt-10 flex flex-col gap-6 text-2xl'>
-                                <NavLink onClick={ () => setIsOpen(false) } className={ isActive } to='/'>Home</NavLink>
-                                <NavLink onClick={ () => setIsOpen(false) } className={ isActive } to='/about'>About</NavLink>
-                                <NavLink onClick={ () => setIsOpen(false) } className={ isActive } to='/skills'>Skills</NavLink>
-                                <NavLink onClick={ () => setIsOpen(false) } className={ isActive } to='/project'>Work</NavLink>
-                                <NavLink onClick={ () => setIsOpen(false) } className={ isActive } to='/contact'>Let's talk</NavLink>
-                            </div>
-                        </div>
-                    </div>
+                </div>
+            </div>
+            <div onClick={ () => setIsOpen(false) } className={ `fixed inset-0 z-50 bg-black transition-opacity duration-300 ${ isOpen ? 'opacity-100' : 'pointer-events-none opacity-0' }` }></div>
+            <div onClick={ event => event.stopPropagation() } style={ { backgroundColor: '#000000', backgroundImage: 'none', opacity: 1 } } className={ `fixed right-0 top-0 bottom-0 z-100 w-[min(21rem,88vw)] border-l border-white/10 bg-black p-6 shadow-2xl transition-transform duration-300 ${ isOpen ? 'translate-x-0' : 'translate-x-full' }` }>
+                <div className='flex justify-end'><button aria-label='Close navigation' onClick={ () => setIsOpen(false) } className='text-[#e68b5e]'><X /></button></div>
+                <div className='mt-10 flex flex-col gap-6 text-2xl'>
+                    <NavLink onClick={ () => setIsOpen(false) } className={ isActive } to='/'>Home</NavLink>
+                    <NavLink onClick={ () => setIsOpen(false) } className={ isActive } to='/about'>About</NavLink>
+                    <NavLink onClick={ () => setIsOpen(false) } className={ isActive } to='/skills'>Skills</NavLink>
+                    <NavLink onClick={ () => setIsOpen(false) } className={ isActive } to='/project'>Work</NavLink>
+                    <NavLink onClick={ () => setIsOpen(false) } className={ isActive } to='/contact'>Let's talk</NavLink>
                 </div>
             </div>
         </>
