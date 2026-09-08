@@ -1,53 +1,89 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
-import { GitHub, ArrowOutward } from '@mui/icons-material';
+import { ArrowUpRight, Code2, Sparkles } from 'lucide-react';
+
+const projects = [
+    {
+        number: '01',
+        title: 'Siddhi Hotels',
+        type: 'Full-stack product',
+        description: 'A complete hotel booking experience with authentication, search, payments, and role-based dashboards.',
+        image: '/landing page.png',
+        tags: ['React', 'Node.js', 'MongoDB'],
+        live: 'https://hotel-booking-site-nine.vercel.app/',
+        code: 'https://github.com/ankitmall932/Hotel-Booking-Site'
+    },
+    {
+        number: '02',
+        title: 'Acyuta Digital Studio',
+        type: 'TypeScript frontend product',
+        description: 'A polished TypeScript digital studio website focused on clear visual storytelling, responsive layouts, and a refined frontend experience.',
+        image: '/acyuta-digital-studio.png',
+        tags: ['TypeScript', 'React', 'Tailwind CSS'],
+        live: 'https://acyuta-web-studio.vercel.app/'
+    },
+    {
+        number: '03',
+        title: 'Sid Notes',
+        type: 'Full-stack product',
+        description: 'A full-stack notes application built as my first TypeScript project, with a focused interface for creating and managing notes.',
+        image: '/SidNotes.png',
+        tags: ['TypeScript', 'React', 'Full-stack'],
+        live: 'https://sid-notes-zeta.vercel.app/'
+    }
+];
+
+const tagClass = 'border border-white/15 px-2 py-1 text-xs text-[#a9a29a]';
 
 function Project () {
     return (
-        <div className='flex w-full flex-col  h-full py-15 gap-10'>
-            <div className='flex w-full xl:h-120 h-full gap-5 xl:flex-row flex-col '>
-                <div className='h-full xl:w-1/4 w-full border border-cyan-400 rounded-2xl flex flex-col gap-2 shadow-[0_0_10px_rgba(34,211,238,0.18)] hover:shadow-[0_0_30px_rgba(34,211,238,0.25)]  transition-all   duration-200 hover:scale-105' >
-                    <div className='h-50 w-full '>
-                        <img src="/landing page.png" alt="landing page" className='h-full w-full object-fit rounded-t-2xl' />
-                    </div>
-                    <div className='h-50 w-full px-3 flex flex-col '>
-                        <h1 className='text-2xl font-semibold mb-2 text-cyan-400'>Siddhi Hotels  </h1>
-                        <h3 className='text-sm font-semibold text-white/70'>Modern Hotel booking web application with authentication and booking flow</h3>
-                        <h1 className='text-2xl text-cyan-400 font-semibold mt-3'>Demo Note : </h1>
-                        <h3 className='text-sm font-semibold text-white/70 mt-2'>Since this demo runs on a free hosting tier, the initial request may take a few moments while the server wakes up.</h3>
-                    </div>
-                    <div className='h-20 w-full flex justify-center  items-center '>
-                        <NavLink to='https://hotel-booking-site-nine.vercel.app/' className='flex justify-center items-center px-3 py-2 border border-cyan-400/40 shadow-[0_0_10px_rgba(34,211,238,0.18)] hover:shadow-[0_0_30px_rgba(34,211,238,0.25)]  transition-all rounded  gap-2 duration-200 hover:scale-105 active:scale-95'><ArrowOutward />Live Demo</NavLink>
-                        <NavLink to='https://github.com/ankitmall932/Hotel-Booking-Site' className='flex justify-center items-center  px-3 py-2 border border-cyan-400/40 shadow-[0_0_10px_rgba(34,211,238,0.18)] hover:shadow-[0_0_30px_rgba(34,211,238,0.25)]  transition-all rounded gap-2 duration-200 hover:scale-105 active:scale-95'><GitHub />GitHub</NavLink>
-                    </div>
+        <div className='mx-auto w-full max-w-290'>
+            <header className='mb-16 flex flex-col gap-5 border-b border-white/10 pb-10 sm:flex-row sm:items-end sm:justify-between'>
+                <div>
+                    <p className='mb-5 font-mono text-xs uppercase tracking-[.16em] text-[#e68b5e]'>Selected work</p>
+                    <h1 className='text-[clamp(3rem,7vw,6.9rem)] font-extrabold leading-[.93] tracking-[-.07em]'>
+                        Things I&apos;ve<br />
+                        <span className='text-[#e68b5e]'>made.</span>
+                    </h1>
                 </div>
-                <div className='h-full xl:w-3/4 w-full sm:p-5 p-2 border border-cyan-400 rounded-2xl shadow-[0_0_10px_rgba(34,211,238,0.18)] hover:shadow-[0_0_30px_rgba(34,211,238,0.25)]  transition-all  duration-200'>
-                    <img src="/Dashboard.png" alt="dashboard image" className='object-cover' />
-                </div>
+                <p className='max-w-xs leading-7 text-[#a9a29a]'>A small collection of products, experiments, and ideas built with care.</p>
+            </header>
+
+            <div className='grid gap-6 lg:grid-cols-2'>
+                { projects.map(project => (
+                    <article
+                        key={ project.number }
+                        className={ `group overflow-hidden rounded border border-white/12 bg-[rgba(29,27,25,.78)] shadow-[0_1.5rem_4rem_rgba(0,0,0,.18)] ${ project.upcoming ? 'border-dashed border-[#91b49b]/40 bg-[#91b49b]/5' : '' }` }
+                    >
+                        <>
+                                <div className='relative h-72 overflow-hidden bg-[#292522]'>
+                                    <img src={ project.image } alt={ project.title } className='h-full w-full object-cover transition duration-500 group-hover:scale-105' />
+                                    <span className='absolute left-5 top-5 bg-[#e68b5e] px-3 py-1 font-mono text-xs text-[#17110e]'>{ project.number }</span>
+                                </div>
+                                <div className='p-7 sm:p-9'>
+                                    <p className='mb-3 font-mono text-xs uppercase tracking-[.16em] text-[#e68b5e]'>{ project.type }</p>
+                                    <div className='flex items-start justify-between gap-4'>
+                                        <h2 className='text-3xl font-bold'>{ project.title }</h2>
+                                        <a href={ project.live } target='_blank' rel='noreferrer' aria-label={ `Open ${ project.title } live demo` } className='text-[#e68b5e]'>
+                                            <ArrowUpRight />
+                                        </a>
+                                    </div>
+                                    <p className='mt-4 max-w-lg leading-7 text-[#a9a29a]'>{ project.description }</p>
+                                    <div className='mt-7 flex flex-wrap gap-2'>
+                                        { project.tags.map(tag => <span key={ tag } className={ tagClass }>{ tag }</span>) }
+                                    </div>
+                                    <div className='mt-8 flex flex-wrap gap-5 text-sm font-bold'>
+                                        <a href={ project.live } target='_blank' rel='noreferrer' className='flex items-center gap-2 text-[#e68b5e]'>Live demo <ArrowUpRight size={ 15 } /></a>
+                                        { project.code && <a href={ project.code } target='_blank' rel='noreferrer' className='flex items-center gap-2 text-[#a9a29a] hover:text-[#f4f0e8]'><Code2 size={ 15 } /> Source</a> }
+                                    </div>
+                                </div>
+                        </>
+                    </article>
+                )) }
             </div>
-            <div className='flex w-full xl:h-100 h-full gap-5 xl:flex-row flex-col '>
-                <div className='xl:h-100 h-full xl:w-1/4 w-full border border-cyan-400 rounded-2xl sm:p-5 p-2 flex flex-col gap-3 shadow-[0_0_10px_rgba(34,211,238,0.18)] hover:shadow-[0_0_30px_rgba(34,211,238,0.25)]  transition-all  duration-200 hover:scale-105' >
-                    <h1 className='text-2xl text-cyan-400 font-semibold'>Key Features</h1>
-                    <ul className='list-disc list-inside text-lg font-semibold text-white/70 '>
-                        <li>Full Authentication</li>
-                        <li>Role based UI</li>
-                        <li>Search & Filtering</li>
-                        <li>Seamless booking flow</li>
-                        <li>Responsive UI</li>
-                        <li>Payment Integration</li>
-                        <li>Owner Dashboard Management </li>
-                        <li>Customer Booking Management</li>
-                        <li>Email Notifications</li>
-                    </ul>
-                </div>
-                <div className='h-full xl:w-3/4 w-full sm:p-5 p-2 border border-cyan-400 rounded-2xl grid xl:grid-cols-2 grid-cols-1 gap-2 shadow-[0_0_10px_rgba(34,211,238,0.18)] hover:shadow-[0_0_30px_rgba(34,211,238,0.25)]  transition-all  duration-200 '>
-                    <div className='flex h-full justify-center items-center '>
-                        <img src="/Booking page.png" alt=" booking page image" className='object-cover h-full' />
-                    </div>
-                    <div className='flex h-full justify-center items-center '>
-                        <img src="/account settings page.png" alt="account setting " className='object-cover h-full' />
-                    </div>
-                </div>
+
+            <div className='mt-16 flex items-center gap-3 border-t border-white/10 pt-8 text-sm text-[#756f69]'>
+                <Sparkles size={ 16 } className='text-[#e68b5e]' />
+                More ideas are already in the notebook.
             </div>
         </div>
     );

@@ -1,42 +1,23 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import { LocationOn, Email, Call, WhatsApp, Instagram, Facebook } from '@mui/icons-material';
+import { Mail, MapPin, ArrowUpRight } from 'lucide-react';
 
 function Footer () {
-    const isActive = ({ isActive }) => {
-        return isActive ? 'text-blue-500 font-semibold' : 'hover:text-blue-500 hover:underline';
-    };
     return (
-        <div className='w-full h-full flex sm:flex-row flex-col sm:justify-evenly gap-5 py-5'>
-            <div className='flex flex-col gap-2' >
-                <h1 className='text-2xl font-semibold '>Contacts</h1>
-                <div className='flex items-center  gap-3'>
-                    <h3><LocationOn /></h3>
-                    <h3>Gorakhpur Uttar Pradesh</h3>
-                </div>
-                <div className='flex items-center  gap-3'>
-                    <h3><Email /></h3>
-                    <h3>ankitmall932@gmail.com</h3>
-                </div>
-                <div className='flex items-center  gap-3'>
-                    <h3><Call /></h3>
-                    <h3>9936738441</h3>
-                </div>
-                <div className='flex gap-5'>
-                    <NavLink to='https://wa.me/919936738441'><WhatsApp /></NavLink>
-                    <NavLink to='https://www.instagram.com/ankit_mall_932'><Instagram /></NavLink>
-                    <NavLink to='https://www.facebook.com/ankitmall.932'><Facebook /></NavLink>
+        <footer className='section-wrap flex flex-col gap-8 py-10 sm:flex-row sm:items-end sm:justify-between'>
+            <div className='flex flex-col gap-3'>
+                <p className='eyebrow'>Have a good idea?</p>
+                <h2 className='text-3xl font-bold tracking-tight text-[#f4f0e8]'>Let's make it real.</h2>
+                <div className='mt-2 flex flex-wrap gap-5 text-sm'>
+                    <span className='flex items-center gap-2'><MapPin size={ 15 } className='text-[#e68b5e]' /> Gorakhpur, India</span>
+                    <a className='flex items-center gap-2 hover:text-[#e68b5e]' href='mailto:ankitmall932@gmail.com'><Mail size={ 15 } className='text-[#e68b5e]' /> ankitmall932@gmail.com</a>
                 </div>
             </div>
-            <div className='w-fit flex flex-col gap-2'>
-                <h1 className='text-2xl font-semibold'>Links</h1>
-                <NavLink className={ isActive } to='/'>Home</NavLink>
-                <NavLink className={ isActive } to='/about'>About</NavLink>
-                <NavLink className={ isActive } to='/skills'>Skills</NavLink>
-                <NavLink className={ isActive } to='/project'>Project</NavLink>
-                <NavLink className={ isActive } to='/contact'>Contact</NavLink>
+            <div className='flex flex-col items-start gap-3 text-sm sm:items-end'>
+                <NavLink to='/contact' className='flex items-center gap-2 font-bold text-[#e68b5e] hover:text-[#f0a477]'>Start a conversation <ArrowUpRight size={ 16 } /></NavLink>
+                <p className='text-xs text-[#756f69]'>© 2026 Ankit Mall. Built with intent.</p>
             </div>
-        </div>
+        </footer>
     );
 }
 

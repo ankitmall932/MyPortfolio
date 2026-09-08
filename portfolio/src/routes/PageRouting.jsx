@@ -5,12 +5,12 @@ import Footer from '../components/Footer';
 
 function PageRouting () {
     return (
-        <div>
+        <div className='min-h-screen'>
             <Navbar />
-            <div className='mt-12 sm:px-15 px-5 bg-slate-950 text-slate-100 py-4'>
+            <main className='site-main text-[#f4f0e8]'>
                 <Outlet />
-            </div>
-            <div className=' sm:px-15 px-5 bg-slate-900 text-slate-400 border-t border-slate-800'>
+            </main>
+            <div className='border-t border-white/10 bg-[#171615] px-[clamp(1rem,5vw,5rem)] text-[#a9a29a]'>
                 <Footer />
             </div>
         </div>
