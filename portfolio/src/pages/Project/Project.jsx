@@ -29,6 +29,15 @@ const projects = [
         image: '/SidNotes.png',
         tags: ['TypeScript', 'React', 'Full-stack'],
         live: 'https://sid-notes-zeta.vercel.app/'
+    },
+    {
+        number: '04',
+        title: 'TaskHub',
+        type: 'Task management app',
+        description: 'A task management app built to help organize work and stay on top of priorities.',
+        image: '/Landing.png',
+        tags: ['Next.js', 'Task management', 'Productivity'],
+        live: 'https://task-hub-lyart-psi.vercel.app'
     }
 ];
 

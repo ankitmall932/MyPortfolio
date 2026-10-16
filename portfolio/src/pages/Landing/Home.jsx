@@ -23,7 +23,7 @@ function Home () {
                     <div className='absolute -bottom-5 -left-5 bg-[#91b49b] px-4 py-3 text-sm font-bold text-[#17110e]'>Design-minded<br />developer</div>
                 </div>
             </div>
-            <div className='grid gap-4 border-t border-white/10 py-8 text-sm text-[#a9a29a] sm:grid-cols-4'><div><span className='text-3xl font-bold text-[#f4f0e8]'>03+</span><br />Full-stack projects</div><div><span className='text-3xl font-bold text-[#f4f0e8]'>02</span><br />Creative disciplines</div><div><span className='text-3xl font-bold text-[#f4f0e8]'>04</span><br />Core technologies</div><div><span className='text-3xl font-bold text-[#f4f0e8]'>∞</span><br />Curiosity to keep learning</div></div>
+            <div className='grid gap-4 border-t border-white/10 py-8 text-sm text-[#a9a29a] sm:grid-cols-4'><div><span className='text-3xl font-bold text-[#f4f0e8]'>04+</span><br />Projects</div><div><span className='text-3xl font-bold text-[#f4f0e8]'>02</span><br />Creative disciplines</div><div><span className='text-3xl font-bold text-[#f4f0e8]'>04</span><br />Core technologies</div><div><span className='text-3xl font-bold text-[#f4f0e8]'>∞</span><br />Curiosity to keep learning</div></div>
         </div>
     );
 }
