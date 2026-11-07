@@ -1,46 +1,47 @@
 import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
-import { Menu, X, ArrowUpRight } from 'lucide-react';
+import { ArrowUpRight, Menu, X } from 'lucide-react';
+
+const links = [
+    [ 'Home', '/' ],
+    [ 'About', '/about' ],
+    [ 'Skills', '/skills' ],
+    [ 'Work', '/project' ]
+];
 
 function Navbar () {
     const [ isOpen, setIsOpen ] = useState(false);
-    const isActive = ({ isActive }) => {
-        return isActive
-            ? 'relative pb-1 text-[#f4f0e8] after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full after:bg-[#e68b5e] after:content-[""]'
-            : 'relative pb-1 text-[#a9a29a] transition-colors hover:text-[#e68b5e] after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-[#e68b5e] after:transition-all after:duration-300 after:content-[""] hover:after:w-full';
-    };
+    const linkClass = ({ isActive }) => `rounded-full px-3 py-2 text-sm font-semibold transition-colors ${ isActive ? 'bg-[#a3b47a] text-[#171713]' : 'text-white/65 hover:bg-white/10 hover:text-white' }`;
+
     return (
         <>
-            <div className='hidden sm:flex fixed top-0 left-0 right-0 z-50 items-center justify-between border-b border-white/10 bg-[#11100f]/90 px-[clamp(1.25rem,5vw,5rem)] py-4 backdrop-blur-md'>
-                <NavLink to='/' className='flex items-center gap-3'>
-                    <span className='flex h-9 w-9 items-center justify-center bg-[#e68b5e] font-bold text-[#17110e]'>AM</span>
-                    <span className='font-bold tracking-tight'>Ankit Mall</span>
-                </NavLink>
-                <div className='flex items-center gap-8'>
-                    <NavLink className={ isActive } to='/'>Home</NavLink>
-                    <NavLink className={ isActive } to='/about'>About</NavLink>
-                    <NavLink className={ isActive } to='/skills'>Skills</NavLink>
-                    <NavLink className={ isActive } to='/project'>Work</NavLink>
-                    <NavLink className={ ({ isActive }) => `flex items-center gap-1 border px-4 py-2 text-sm font-bold transition-colors ${ isActive ? 'border-[#e68b5e] bg-[#e68b5e] text-[#17110e]' : 'border-[#e68b5e]/60 text-[#e68b5e] hover:bg-[#e68b5e] hover:text-[#17110e]' }` } to='/contact'>Let's talk <ArrowUpRight size={ 15 } /></NavLink>
-                </div>
-            </div>
-            <div className='flex sm:hidden fixed top-0 right-0 left-0 z-50 items-center justify-between border-b border-white/10 bg-[#11100f]/95 px-4 py-4 backdrop-blur-md'>
-                <NavLink to='/' className='flex items-center gap-3 font-bold'><span className='flex h-9 w-9 items-center justify-center bg-[#e68b5e] text-sm text-[#17110e]'>AM</span>Ankit Mall</NavLink>
-                <div>
-                    <button aria-label='Open navigation' onClick={ () => setIsOpen(true) } className='text-[#e68b5e]'><Menu /></button>
-                </div>
-            </div>
-            <div onClick={ () => setIsOpen(false) } className={ `fixed inset-0 z-50 bg-black transition-opacity duration-300 ${ isOpen ? 'opacity-100' : 'pointer-events-none opacity-0' }` }></div>
-            <div onClick={ event => event.stopPropagation() } style={ { backgroundColor: '#000000', backgroundImage: 'none', opacity: 1 } } className={ `fixed right-0 top-0 bottom-0 z-100 w-[min(21rem,88vw)] border-l border-white/10 bg-black p-6 shadow-2xl transition-transform duration-300 ${ isOpen ? 'translate-x-0' : 'translate-x-full' }` }>
-                <div className='flex justify-end'><button aria-label='Close navigation' onClick={ () => setIsOpen(false) } className='text-[#e68b5e]'><X /></button></div>
-                <div className='mt-10 flex flex-col gap-6 text-2xl'>
-                    <NavLink onClick={ () => setIsOpen(false) } className={ isActive } to='/'>Home</NavLink>
-                    <NavLink onClick={ () => setIsOpen(false) } className={ isActive } to='/about'>About</NavLink>
-                    <NavLink onClick={ () => setIsOpen(false) } className={ isActive } to='/skills'>Skills</NavLink>
-                    <NavLink onClick={ () => setIsOpen(false) } className={ isActive } to='/project'>Work</NavLink>
-                    <NavLink onClick={ () => setIsOpen(false) } className={ isActive } to='/contact'>Let's talk</NavLink>
-                </div>
-            </div>
+            <header className='fixed left-0 right-0 top-0 z-50 px-3 pt-3 sm:px-5 sm:pt-4'>
+                <nav aria-label='Main navigation' className='mx-auto flex max-w-310 items-center justify-between rounded-2xl border border-white/10 bg-[#151412]/90 px-3 py-2.5 shadow-2xl shadow-black/20 backdrop-blur-xl sm:px-5'>
+                    <NavLink to='/' onClick={ () => setIsOpen(false) } className='group flex items-center gap-2.5'>
+                        <span className='grid h-9 w-9 place-items-center rounded-xl bg-[#a3b47a] text-xs font-black text-[#171713] transition group-hover:rotate-6'>AM</span>
+                        <span className='text-sm font-extrabold tracking-tight'>Ankit Mall<span className='text-[#a3b47a]'>.</span></span>
+                    </NavLink>
+                    <div className='hidden items-center gap-1 sm:flex'>
+                        { links.map(([ label, path ]) => <NavLink key={ path } to={ path } className={ linkClass }>{ label }</NavLink>) }
+                        <NavLink to='/contact' className='ml-2 inline-flex items-center gap-2 rounded-full bg-[#d47c60] px-4 py-2.5 text-sm font-bold text-[#171713] transition hover:bg-[#a3b47a]'>Let&apos;s talk <ArrowUpRight size={ 15 } /></NavLink>
+                    </div>
+                    <button type='button' aria-label={ isOpen ? 'Close navigation' : 'Open navigation' } aria-expanded={ isOpen } onClick={ () => setIsOpen(!isOpen) } className='grid h-10 w-10 place-items-center rounded-xl border border-white/15 text-[#a3b47a] transition hover:bg-white/10 sm:hidden'>
+                        { isOpen ? <X size={ 20 } /> : <Menu size={ 20 } /> }
+                    </button>
+                </nav>
+            </header>
+
+            { isOpen && <div className='fixed inset-0 z-40 bg-[#11100f]/95 px-5 pb-8 pt-24 backdrop-blur-xl sm:hidden'>
+                <nav aria-label='Mobile navigation' className='mx-auto flex max-w-lg flex-col gap-2'>
+                    { links.map(([ label, path ], index) => (
+                        <NavLink key={ path } to={ path } onClick={ () => setIsOpen(false) } className={ ({ isActive }) => `flex items-center justify-between border-b border-white/10 py-4 text-4xl font-extrabold tracking-tight transition ${ isActive ? 'text-[#a3b47a]' : 'text-white hover:text-[#a3b47a]' }` }>
+                            <span>{ label }</span><span className='font-mono text-sm text-white/30'>0{ index + 1 }</span>
+                        </NavLink>
+                    )) }
+                    <NavLink to='/contact' onClick={ () => setIsOpen(false) } className='mt-5 flex items-center justify-between rounded-2xl bg-[#a3b47a] p-5 text-lg font-extrabold text-[#171713]'>Let&apos;s talk <ArrowUpRight /></NavLink>
+                    <p className='mt-8 font-mono text-xs uppercase tracking-widest text-white/35'>Gorakhpur, India · Available for good ideas</p>
+                </nav>
+            </div> }
         </>
     );
 }

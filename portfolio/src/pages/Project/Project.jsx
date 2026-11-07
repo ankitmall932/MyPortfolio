@@ -1,98 +1,96 @@
 import React from 'react';
-import { ArrowUpRight, Code2, Sparkles } from 'lucide-react';
+import { ArrowDownRight, ArrowUpRight, Code2, Sparkles } from 'lucide-react';
 
 const projects = [
     {
-        number: '01',
+        title: 'SidBites',
+        type: 'Full-stack product',
+        description: 'A full-stack food ordering platform built with a modern Next.js stack.',
+        image: '/SidBites.png',
+        tags: ['Next.js', 'Better Auth', 'PostgreSQL', 'Prisma'],
+        live: 'https://sid-bites.vercel.app',
+        color: 'bg-[#d47c60]'
+    },
+    {
+        title: 'TaskHub',
+        type: 'Task management app',
+        description: 'A task management app built to help organize work and stay on top of priorities.',
+        image: '/Landing.png',
+        tags: ['Next.js', 'Task management', 'Productivity'],
+        live: 'https://task-hub-lyart-psi.vercel.app',
+        color: 'bg-[#a3b47a]'
+    },
+    {
+        title: 'Acyuta Digital Studio',
+        type: 'TypeScript frontend product',
+        description: 'A polished TypeScript digital studio website focused on clear visual storytelling, responsive layouts, and a refined frontend experience.',
+        image: '/acyuta-digital-studio.png',
+        tags: ['TypeScript', 'React', 'Tailwind CSS'],
+        live: 'https://acyuta-web-studio.vercel.app/',
+        color: 'bg-[#a49bbd]'
+    },
+    {
         title: 'Siddhi Hotels',
         type: 'Full-stack product',
         description: 'A complete hotel booking experience with authentication, search, payments, and role-based dashboards.',
         image: '/landing page.png',
         tags: ['React', 'Node.js', 'MongoDB'],
         live: 'https://hotel-booking-site-nine.vercel.app/',
-        code: 'https://github.com/ankitmall932/Hotel-Booking-Site'
+        code: 'https://github.com/ankitmall932/Hotel-Booking-Site',
+        color: 'bg-[#ffb93d]'
     },
     {
-        number: '02',
-        title: 'Acyuta Digital Studio',
-        type: 'TypeScript frontend product',
-        description: 'A polished TypeScript digital studio website focused on clear visual storytelling, responsive layouts, and a refined frontend experience.',
-        image: '/acyuta-digital-studio.png',
-        tags: ['TypeScript', 'React', 'Tailwind CSS'],
-        live: 'https://acyuta-web-studio.vercel.app/'
-    },
-    {
-        number: '03',
         title: 'Sid Notes',
         type: 'Full-stack product',
         description: 'A full-stack notes application built as my first TypeScript project, with a focused interface for creating and managing notes.',
         image: '/SidNotes.png',
         tags: ['TypeScript', 'React', 'Full-stack'],
-        live: 'https://sid-notes-zeta.vercel.app/'
-    },
-    {
-        number: '04',
-        title: 'TaskHub',
-        type: 'Task management app',
-        description: 'A task management app built to help organize work and stay on top of priorities.',
-        image: '/Landing.png',
-        tags: ['Next.js', 'Task management', 'Productivity'],
-        live: 'https://task-hub-lyart-psi.vercel.app'
+        live: 'https://sid-notes-zeta.vercel.app/',
+        color: 'bg-[#78c8ee]'
     }
 ];
 
-const tagClass = 'border border-white/15 px-2 py-1 text-xs text-[#a9a29a]';
-
 function Project () {
     return (
-        <div className='mx-auto w-full max-w-290'>
-            <header className='mb-16 flex flex-col gap-5 border-b border-white/10 pb-10 sm:flex-row sm:items-end sm:justify-between'>
-                <div>
-                    <p className='mb-5 font-mono text-xs uppercase tracking-[.16em] text-[#e68b5e]'>Selected work</p>
-                    <h1 className='text-[clamp(3rem,7vw,6.9rem)] font-extrabold leading-[.93] tracking-[-.07em]'>
-                        Things I&apos;ve<br />
-                        <span className='text-[#e68b5e]'>made.</span>
-                    </h1>
+        <div className='mx-auto w-full max-w-310'>
+            <header className='relative isolate mb-8 overflow-hidden rounded-4xl bg-[#89956f] p-7 text-[#171713] sm:mb-12 sm:p-12 lg:p-16'>
+                <div className='absolute -right-16 -top-32 -z-10 h-96 w-96 rounded-full border border-black/10 shadow-[0_0_0_2rem_rgba(0,0,0,.025),0_0_0_4rem_rgba(0,0,0,.02)]'></div>
+                <p className='text-xs font-bold uppercase tracking-[.2em] text-black/55'>A little bit of everything / 2026</p>
+                <div className='mt-8 flex flex-wrap items-end justify-between gap-6'>
+                    <h1 className='text-[clamp(4rem,10vw,8.5rem)] font-extrabold leading-[.78] tracking-[-.095em]'>Things I&apos;ve<br /><span className='font-serif font-medium italic text-[#d47c60]'>made.</span></h1>
+                    <p className='max-w-xs text-sm leading-6 text-black/60 sm:text-base'>Five little corners of the internet, built with curiosity and a lot of care.</p>
                 </div>
-                <p className='max-w-xs leading-7 text-[#a9a29a]'>A small collection of products, experiments, and ideas built with care.</p>
+                <div className='mt-9 flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-black/50'><Sparkles size={ 15 } /> Five projects <span>·</span> One curious mind</div>
             </header>
 
-            <div className='grid gap-6 lg:grid-cols-2'>
+            <div className='grid gap-5 md:grid-cols-2'>
                 { projects.map(project => (
-                    <article
-                        key={ project.number }
-                        className={ `group overflow-hidden rounded border border-white/12 bg-[rgba(29,27,25,.78)] shadow-[0_1.5rem_4rem_rgba(0,0,0,.18)] ${ project.upcoming ? 'border-dashed border-[#91b49b]/40 bg-[#91b49b]/5' : '' }` }
-                    >
-                        <>
-                                <div className='relative h-72 overflow-hidden bg-[#292522]'>
-                                    <img src={ project.image } alt={ project.title } className='h-full w-full object-cover transition duration-500 group-hover:scale-105' />
-                                    <span className='absolute left-5 top-5 bg-[#e68b5e] px-3 py-1 font-mono text-xs text-[#17110e]'>{ project.number }</span>
-                                </div>
-                                <div className='p-7 sm:p-9'>
-                                    <p className='mb-3 font-mono text-xs uppercase tracking-[.16em] text-[#e68b5e]'>{ project.type }</p>
-                                    <div className='flex items-start justify-between gap-4'>
-                                        <h2 className='text-3xl font-bold'>{ project.title }</h2>
-                                        <a href={ project.live } target='_blank' rel='noreferrer' aria-label={ `Open ${ project.title } live demo` } className='text-[#e68b5e]'>
-                                            <ArrowUpRight />
-                                        </a>
-                                    </div>
-                                    <p className='mt-4 max-w-lg leading-7 text-[#a9a29a]'>{ project.description }</p>
-                                    <div className='mt-7 flex flex-wrap gap-2'>
-                                        { project.tags.map(tag => <span key={ tag } className={ tagClass }>{ tag }</span>) }
-                                    </div>
-                                    <div className='mt-8 flex flex-wrap gap-5 text-sm font-bold'>
-                                        <a href={ project.live } target='_blank' rel='noreferrer' className='flex items-center gap-2 text-[#e68b5e]'>Live demo <ArrowUpRight size={ 15 } /></a>
-                                        { project.code && <a href={ project.code } target='_blank' rel='noreferrer' className='flex items-center gap-2 text-[#a9a29a] hover:text-[#f4f0e8]'><Code2 size={ 15 } /> Source</a> }
-                                    </div>
-                                </div>
-                        </>
+                    <article key={ project.title } className='group overflow-hidden rounded-3xl border border-white/10 bg-[#1a1917] transition duration-300 hover:-translate-y-1.5 hover:border-white/30'>
+                        <a href={ project.live } target='_blank' rel='noreferrer' className={ `relative block overflow-hidden p-3 sm:p-4 ${ project.color }` }>
+                            <img src={ project.image } alt={ `${ project.title } project preview` } className='aspect-[1.55] w-full rounded-xl object-cover object-top transition duration-500 group-hover:scale-[1.025]' />
+                            <span className='absolute bottom-6 right-6 grid h-11 w-11 place-items-center rounded-full bg-[#171713] text-[#a3b47a] transition group-hover:rotate-45'><ArrowUpRight size={ 19 } /></span>
+                        </a>
+                        <div className='p-5 sm:p-7'>
+                            <p className='text-[10px] font-bold uppercase tracking-[.16em] text-[#a3b47a]'>{ project.type }</p>
+                            <div className='mt-2 flex items-start justify-between gap-3'>
+                                <h2 className='text-2xl font-extrabold tracking-tight sm:text-3xl'>{ project.title }</h2>
+                                <ArrowDownRight className='mt-1 shrink-0 text-white/35 transition group-hover:translate-x-1 group-hover:translate-y-1 group-hover:text-[#a3b47a]' />
+                            </div>
+                            <p className='mt-3 max-w-lg text-sm leading-6 text-white/55'>{ project.description }</p>
+                            <div className='mt-5 flex flex-wrap gap-2'>
+                                { project.tags.map(tag => <span key={ tag } className='rounded-full border border-white/10 px-3 py-1.5 text-[10px] font-semibold text-white/65'>{ tag }</span>) }
+                            </div>
+                            <div className='mt-6 flex flex-wrap gap-5 text-xs font-bold'>
+                                <a href={ project.live } target='_blank' rel='noreferrer' className='inline-flex items-center gap-1.5 text-[#a3b47a] hover:text-white'>Live project <ArrowUpRight size={ 14 } /></a>
+                                { project.code && <a href={ project.code } target='_blank' rel='noreferrer' className='inline-flex items-center gap-1.5 text-white/55 hover:text-white'><Code2 size={ 14 } /> Source code</a> }
+                            </div>
+                        </div>
                     </article>
                 )) }
             </div>
 
-            <div className='mt-16 flex items-center gap-3 border-t border-white/10 pt-8 text-sm text-[#756f69]'>
-                <Sparkles size={ 16 } className='text-[#e68b5e]' />
-                More ideas are already in the notebook.
+            <div className='mt-12 flex items-center gap-3 border-t border-white/10 py-8 text-xs text-white/40'>
+                <span>More ideas are already in the notebook.</span>
             </div>
         </div>
     );

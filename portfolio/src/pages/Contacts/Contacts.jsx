@@ -34,7 +34,7 @@ const Contacts = () => {
         >
             <div className="lg:max-w-7xl w-full md:mx-auto mx:1 flex flex-col gap-8">
                 <div className="grid lg:grid-cols-2 grid-cols-1 gap-8">
-                    <div className="rounded-3xl border border-cyan-400/40 bg-white/5 backdrop-blur-md sm:p-8 p-4 shadow-[0_0_30px_rgba(34,211,238,0.12)">
+                    <div className="rounded-3xl border border-cyan-400/40 bg-white/5 backdrop-blur-md sm:p-8 p-4 shadow-[0_0_30px_rgba(196,240,82,0.12)]">
                         <p className="text-cyan-400 uppercase tracking-[0.2em] mb-3">
                             Contact
                         </p>
@@ -64,7 +64,7 @@ const Contacts = () => {
                             </NavLink>
                         </div>
                     </div>
-                    <div className="rounded-3xl border border-cyan-400/40 bg-white/5 backdrop-blur-md  sm:p-8 p-4  shadow-[0_0_30px_rgba(34,211,238,0.12)]">
+                    <div className="rounded-3xl border border-cyan-400/40 bg-white/5 backdrop-blur-md  sm:p-8 p-4  shadow-[0_0_30px_rgba(196,240,82,0.12)]">
                         <p className="text-cyan-400 uppercase tracking-[0.2em] mb-3">
                             Availability
                         </p>
@@ -93,7 +93,7 @@ const Contacts = () => {
                 <form
                     ref={ form }
                     onSubmit={ sendEmail }
-                    className="rounded-3xl border border-cyan-400/40 bg-white/5 backdrop-blur-md sm:p-8 p-4 shadow-[0_0_30px_rgba(34,211,238,0.12)]"
+                    className="rounded-3xl border border-cyan-400/40 bg-white/5 backdrop-blur-md sm:p-8 p-4 shadow-[0_0_30px_rgba(196,240,82,0.12)]"
                 >
                     <div className="flex flex-col gap-6">
                         <input
@@ -116,7 +116,7 @@ const Contacts = () => {
                             className="w-full bg-transparent border border-cyan-400/20 rounded-xl sm:px-5 px-2 sm:py-4 py-2 outline-none focus:border-cyan-400 transition-all resize-none" ></textarea>
                         <button
                             type="submit"
-                            className="rounded-xl bg-cyan-500 py-4 font-semibold text-lg hover:bg-cyan-400 hover:scale-[1.01] transition-all duration-300">
+                            className="rounded-xl bg-[#a3b47a] py-4 font-semibold text-lg text-[#171713] transition-all duration-300 hover:scale-[1.01] hover:bg-[#b7c58f]">
                             Send Message
                         </button>
                     </div>
