@@ -2,10 +2,12 @@ import React from 'react';
 import { Outlet } from 'react-router-dom';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
+import SEO from '../components/SEO';
 
 function PageRouting () {
     return (
         <div className='min-h-screen'>
+            <SEO />
             <Navbar />
             <main className='site-main text-[#f4f0e8]'>
                 <Outlet />

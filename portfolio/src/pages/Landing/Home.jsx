@@ -10,17 +10,17 @@ const featuredProjects = [
 
 function Home () {
     return (
-        <div className='mx-auto w-full max-w-[1240px]'>
-            <section className='relative isolate grid min-h-[min(760px,calc(100svh-150px))] overflow-hidden rounded-[2rem] bg-[#89956f] text-[#171713] shadow-[0_30px_100px_rgba(0,0,0,.25)] lg:grid-cols-[1.08fr_.92fr]'>
-                <div className='pointer-events-none absolute -right-32 -top-40 -z-10 h-[34rem] w-[34rem] rounded-full border border-black/10 sm:right-0'></div>
-                <div className='pointer-events-none absolute -right-12 -top-20 -z-10 h-[25rem] w-[25rem] rounded-full border border-black/10'></div>
+        <div className='mx-auto w-full max-w-310'>
+            <section className='relative isolate grid min-h-[min(760px,calc(100svh-150px))] overflow-hidden rounded-4xl bg-[#89956f] text-[#171713] shadow-[0_30px_100px_rgba(0,0,0,.25)] lg:grid-cols-[1.08fr_.92fr]'>
+                <div className='pointer-events-none absolute -right-32 -top-40 -z-10 h-136 w-136 rounded-full border border-black/10 sm:right-0'></div>
+                <div className='pointer-events-none absolute -right-12 -top-20 -z-10 h-100 w-100 rounded-full border border-black/10'></div>
                 <div className='relative z-10 flex flex-col items-start p-7 sm:p-10 lg:justify-center lg:p-14 xl:p-16'>
                     <div className='inline-flex items-center gap-2 rounded-full border border-black/15 bg-white/25 px-4 py-2 text-xs font-bold uppercase tracking-[.12em]'>
                         <span className='relative flex h-2.5 w-2.5'><span className='absolute inline-flex h-full w-full animate-ping rounded-full bg-[#354e38] opacity-40'></span><span className='relative inline-flex h-2.5 w-2.5 rounded-full bg-[#354e38]'></span></span>
                         Open to good ideas
                     </div>
                     <p className='mb-3 mt-10 text-xs font-bold uppercase tracking-[.2em] text-black/55'>Ankit Mall <span className='px-1'>/</span> Developer + creative</p>
-                    <h1 className='max-w-[850px] text-[clamp(4rem,9vw,8.5rem)] font-extrabold leading-[.78] tracking-[-.095em]'>
+                    <h1 className='max-w-212.5 text-[clamp(4rem,9vw,8.5rem)] font-extrabold leading-[.78] tracking-[-.095em]'>
                         Make it<br />
                         <span className='font-serif font-medium italic tracking-[-.09em]'>work.</span><br />
                         Make it<br className='lg:hidden' /> <span className='text-[#d47c60]'>matter.</span>
@@ -33,16 +33,16 @@ function Home () {
                     <div className='mt-10 flex items-center gap-2 text-xs font-semibold text-black/55'><MapPin size={ 14 } /> Gorakhpur, India <span className='mx-1'>·</span> Making for the web since 2022</div>
                 </div>
 
-                <div className='relative flex min-h-[440px] items-center justify-center px-8 pb-12 pt-5 sm:min-h-[560px] lg:min-h-0 lg:py-12 lg:pr-12'>
+                <div className='relative flex min-h-110 items-center justify-center px-8 pb-12 pt-5 sm:min-h-140 lg:min-h-0 lg:py-12 lg:pr-12'>
                     <div className='absolute right-[12%] top-[13%] h-24 w-24 rounded-full bg-[#d47c60] sm:right-[16%] sm:h-32 sm:w-32'></div>
-                    <div className='relative w-[min(74%,360px)] rotate-[3deg] rounded-[1.4rem] border-[9px] border-[#171713] bg-[#171713] shadow-[18px_22px_0_rgba(23,23,19,.16)] transition duration-500 hover:rotate-0'>
-                        <img src='/Ankit Mall.jpeg' alt='Ankit Mall' className='aspect-[4/5] w-full rounded-[.8rem] object-cover' />
+                    <div className='relative w-[min(74%,360px)] rotate-3 rounded-[1.4rem] border-[9px] border-[#171713] bg-[#171713] shadow-[18px_22px_0_rgba(23,23,19,.16)] transition duration-500 hover:rotate-0'>
+                        <img src='/Ankit Mall.jpeg' alt='Ankit Mall' className='aspect-4/5 w-full rounded-[.8rem] object-cover' />
                         <div className='absolute -bottom-5 -left-7 rounded-2xl bg-[#a49bbd] px-4 py-3 shadow-xl sm:-left-12'>
                             <span className='block font-mono text-[10px] font-bold uppercase tracking-[.14em]'>The human behind</span>
                             <span className='text-xl font-extrabold tracking-tight'>the pixels.</span>
                         </div>
                     </div>
-                    <div className='absolute right-[4%] top-[29%] flex h-[4.5rem] w-[4.5rem] rotate-12 items-center justify-center rounded-full bg-[#d47c60] text-[#171713] shadow-xl sm:right-[9%] sm:top-[25%] sm:h-24 sm:w-24'>
+                    <div className='absolute right-[4%] top-[29%] flex h-18 w-18 rotate-12 items-center justify-center rounded-full bg-[#d47c60] text-[#171713] shadow-xl sm:right-[9%] sm:top-[25%] sm:h-24 sm:w-24'>
                         <Sparkles size={ 36 } strokeWidth={ 1.5 } />
                     </div>
                     <div className='absolute bottom-[13%] right-[4%] max-w-36 -rotate-3 rounded-xl bg-[#171713] px-4 py-3 text-white shadow-xl sm:bottom-[17%] sm:right-[8%]'>
@@ -85,7 +85,7 @@ function Home () {
                 </div>
             </section>
 
-            <section className='relative my-12 overflow-hidden rounded-[2rem] bg-[#a49bbd] p-7 text-[#171713] sm:my-16 sm:p-12 lg:p-16'>
+            <section className='relative my-12 overflow-hidden rounded-4xl bg-[#a49bbd] p-7 text-[#171713] sm:my-16 sm:p-12 lg:p-16'>
                 <span className='absolute -right-10 -top-24 select-none font-serif text-[20rem] leading-none text-white/20'>?</span>
                 <div className='relative z-10 max-w-3xl'>
                     <p className='text-xs font-bold uppercase tracking-[.18em] text-black/55'>Have a good one?</p>

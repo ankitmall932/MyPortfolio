@@ -4,7 +4,7 @@ import { ArrowUpRight, Mail, MapPin } from 'lucide-react';
 
 function Footer () {
     return (
-        <footer className='mx-auto flex w-full max-w-[1240px] flex-col gap-8 py-9 sm:flex-row sm:items-end sm:justify-between'>
+        <footer className='mx-auto flex w-full max-w-310 flex-col gap-8 py-9 sm:flex-row sm:items-end sm:justify-between'>
             <div className='flex flex-col gap-3'>
                 <p className='font-mono text-[10px] font-bold uppercase tracking-[.18em] text-[#a3b47a]'>Got a good one?</p>
                 <h2 className='text-3xl font-extrabold tracking-tight text-white'>Let&apos;s make it real.</h2>

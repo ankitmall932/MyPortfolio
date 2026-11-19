@@ -38,9 +38,9 @@ const Contacts = () => {
                         <p className="text-cyan-400 uppercase tracking-[0.2em] mb-3">
                             Contact
                         </p>
-                        <h2 className="text-4xl font-bold mb-8">
+                        <h1 className="text-4xl font-bold mb-8">
                             Contact Me
-                        </h2>
+                        </h1>
                         <div className="space-y-6 text-gray-300">
                             <div className="flex items-center gap-4">
                                 <MapPin className="text-cyan-400" />
@@ -76,7 +76,7 @@ const Contacts = () => {
                                 Freelance Projects
                             </div>
                             <div className="border border-cyan-400/20 rounded-xl px-4 py-3 hover:border-cyan-400 transition-all">
-                                Frontend Development
+                                Frontend and Backend Development
                             </div>
                             <div className="border border-cyan-400/20 rounded-xl px-4 py-3 hover:border-cyan-400 transition-all">
                                 Full Stack Web Apps
