@@ -71,7 +71,7 @@ function Home () {
                 </div>
                 <div className='grid gap-4 md:grid-cols-2 lg:grid-cols-12 lg:grid-rows-2'>
                     { featuredProjects.map((project, index) => (
-                        <a key={ project.name } className={ `group relative flex flex-col overflow-hidden rounded-[1.4rem] border border-white/[.08] bg-[#1a1917] transition duration-300 hover:-translate-y-1 hover:border-white/20 ${ index === 0 ? 'md:col-span-2 lg:col-span-7 lg:row-span-2 lg:min-h-[640px]' : 'lg:col-span-5' }` } href={ project.link } target='_blank' rel='noreferrer'>
+                        <a key={ project.name } className={ `group relative flex flex-col overflow-hidden rounded-[1.4rem] border border-white/8 bg-[#1a1917] transition duration-300 hover:-translate-y-1 hover:border-white/20 ${ index === 0 ? 'md:col-span-2 lg:col-span-7 lg:row-span-2 lg:min-h-160' : 'lg:col-span-5' }` } href={ project.link } target='_blank' rel='noreferrer'>
                             <div className={ `relative overflow-hidden ${ index === 0 ? 'aspect-[1.65] bg-[#11100f] md:aspect-[1.5] lg:aspect-[1.3]' : 'aspect-[1.55] lg:aspect-[2.4]' }` }>
                                 <img src={ project.image } alt={ `${ project.name } project preview` } className={ `h-full w-full transition duration-500 group-hover:scale-[1.035] ${ index === 0 ? 'object-contain object-center' : 'object-cover object-top' }` } />
                                 <span className={ `absolute left-5 top-5 h-1 w-10 rounded-full ${ project.color }` }></span>

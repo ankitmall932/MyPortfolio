@@ -65,8 +65,8 @@ function Project () {
 
             <div className='grid gap-5 md:grid-cols-2'>
                 { projects.map((project, index) => (
-                    <article key={ project.title } className={ `group overflow-hidden rounded-3xl border border-white/[.08] bg-[#1a1917] transition duration-300 hover:-translate-y-1 hover:border-white/20 ${ index === 0 ? 'md:col-span-2 md:grid md:grid-cols-2' : '' }` }>
-                        <a href={ project.live } target='_blank' rel='noreferrer' className={ `relative block overflow-hidden ${ index === 0 ? 'min-h-64 bg-[#11100f] md:min-h-[360px]' : '' }` }>
+                    <article key={ project.title } className={ `group overflow-hidden rounded-3xl border border-white/8 bg-[#1a1917] transition duration-300 hover:-translate-y-1 hover:border-white/20 ${ index === 0 ? 'md:col-span-2 md:grid md:grid-cols-2' : '' }` }>
+                        <a href={ project.live } target='_blank' rel='noreferrer' className={ `relative block overflow-hidden ${ index === 0 ? 'min-h-64 bg-[#11100f] md:min-h-90' : '' }` }>
                             <img src={ project.image } alt={ `${ project.title } project preview` } className={ `w-full transition duration-500 group-hover:scale-[1.025] ${ index === 0 ? 'aspect-[1.55] object-contain object-center md:absolute md:inset-0 md:h-full' : 'aspect-[1.55] object-cover object-top' }` } />
                             <span className={ `absolute left-5 top-5 h-1 w-10 rounded-full ${ project.color }` }></span>
                             <span className='absolute bottom-4 right-4 grid h-11 w-11 place-items-center rounded-full bg-[#171713]/90 text-[#a3b47a] shadow-lg shadow-black/20 transition group-hover:rotate-45'><ArrowUpRight size={ 19 } /></span>

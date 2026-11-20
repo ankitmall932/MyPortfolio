@@ -93,7 +93,7 @@ function Skills () {
                     <section key={ title } className='group rounded-3xl border border-white/10 bg-[rgba(29,27,25,.78)] p-6 shadow-[0_1.5rem_4rem_rgba(0,0,0,.15)] transition duration-300 hover:-translate-y-1 hover:border-[#a3b47a]/50 sm:p-7'>
                         <div className='mb-8 flex items-start justify-between'><div><p className='mb-2 font-mono text-xs uppercase tracking-[.14em] text-[#a3b47a]'>{ title }</p><p className='max-w-xs text-sm leading-6 text-[#a9a29a]'>{ description }</p></div>{ React.createElement(Icon, { className: 'text-[#a49bbd]', size: 25 }) }</div>
                         <div className='grid grid-cols-2 gap-2'>
-                            { skills.map(([ name, icon ]) => <div key={ name } className='flex min-h-20 flex-col items-center justify-center gap-2 rounded-xl border border-white/8 bg-[#171615] px-2 py-3 text-center transition duration-200 hover:-translate-y-0.5 hover:border-[#a3b47a]/60 hover:bg-[#a3b47a]/[.06]'>{ renderSkillIcon(icon) }<span className='text-xs text-[#d6d0c8]'>{ name }</span></div>) }
+                            { skills.map(([ name, icon ]) => <div key={ name } className='flex min-h-20 flex-col items-center justify-center gap-2 rounded-xl border border-white/8 bg-[#171615] px-2 py-3 text-center transition duration-200 hover:-translate-y-0.5 hover:border-[#a3b47a]/60 hover:bg-[#a3b47a]/6'>{ renderSkillIcon(icon) }<span className='text-xs text-[#d6d0c8]'>{ name }</span></div>) }
                         </div>
                     </section>
                 )) }

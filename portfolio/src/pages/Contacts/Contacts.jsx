@@ -42,7 +42,7 @@ const Contacts = () => {
 
     return (
         <div className='section-wrap'>
-            <header className='relative isolate mb-8 overflow-hidden rounded-[2rem] border border-white/10 bg-gradient-to-br from-[#25281f] via-[#1c1b18] to-[#29201d] p-7 sm:p-10 lg:p-14'>
+            <header className='relative isolate mb-8 overflow-hidden rounded-4xl border border-white/10 bg-linear-to-br from-[#25281f] via-[#1c1b18] to-[#29201d] p-7 sm:p-10 lg:p-14'>
                 <div className='absolute -right-20 -top-32 -z-10 h-80 w-80 rounded-full border border-[#a3b47a]/20 shadow-[0_0_0_2rem_rgba(163,180,122,.025),0_0_0_4rem_rgba(163,180,122,.02)]'></div>
                 <div className='absolute bottom-0 right-[22%] -z-10 h-32 w-32 rounded-full bg-[#d47c60]/10 blur-3xl'></div>
                 <div className='relative max-w-3xl'>
@@ -61,17 +61,17 @@ const Contacts = () => {
                     <section className='surface p-6 sm:p-8'>
                         <p className='eyebrow mb-6'>Say hello</p>
                         <div className='space-y-3'>
-                            <a href='mailto:ankitmall932@gmail.com' className='group flex items-center gap-4 rounded-2xl border border-white/8 bg-white/[.025] p-4 transition hover:border-[#a3b47a]/50 hover:bg-[#a3b47a]/[.06]'>
+                            <a href='mailto:ankitmall932@gmail.com' className='group flex items-center gap-4 rounded-2xl border border-white/8 bg-white/2.5 p-4 transition hover:border-[#a3b47a]/50 hover:bg-[#a3b47a]/6'>
                                 <span className='grid h-11 w-11 shrink-0 place-items-center rounded-xl bg-[#a3b47a]/10 text-[#a3b47a]'><Mail size={ 19 } /></span>
                                 <span className='min-w-0 flex-1'><span className='block text-[10px] font-bold uppercase tracking-[.15em] text-white/40'>Email</span><span className='mt-1 block break-all text-sm font-semibold'>ankitmall932@gmail.com</span></span>
                                 <ArrowUpRight size={ 16 } className='text-white/35 transition group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-[#a3b47a]' />
                             </a>
-                            <a href='tel:+919305617987' className='group flex items-center gap-4 rounded-2xl border border-white/8 bg-white/[.025] p-4 transition hover:border-[#a3b47a]/50 hover:bg-[#a3b47a]/[.06]'>
+                            <a href='tel:+919305617987' className='group flex items-center gap-4 rounded-2xl border border-white/8 bg-white/2.5 p-4 transition hover:border-[#a3b47a]/50 hover:bg-[#a3b47a]/6'>
                                 <span className='grid h-11 w-11 shrink-0 place-items-center rounded-xl bg-[#d47c60]/10 text-[#d47c60]'><Phone size={ 19 } /></span>
                                 <span className='min-w-0 flex-1'><span className='block text-[10px] font-bold uppercase tracking-[.15em] text-white/40'>Phone</span><span className='mt-1 block text-sm font-semibold'>+91 93056 17987</span></span>
                                 <ArrowUpRight size={ 16 } className='text-white/35 transition group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-[#a3b47a]' />
                             </a>
-                            <div className='flex items-center gap-4 rounded-2xl border border-white/8 bg-white/[.025] p-4'>
+                            <div className='flex items-center gap-4 rounded-2xl border border-white/8 bg-white/2.5 p-4'>
                                 <span className='grid h-11 w-11 shrink-0 place-items-center rounded-xl bg-[#a49bbd]/10 text-[#a49bbd]'><MapPin size={ 19 } /></span>
                                 <span><span className='block text-[10px] font-bold uppercase tracking-[.15em] text-white/40'>Based in</span><span className='mt-1 block text-sm font-semibold'>Gorakhpur, India</span></span>
                             </div>
