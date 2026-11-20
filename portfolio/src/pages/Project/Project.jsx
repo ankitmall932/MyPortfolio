@@ -26,7 +26,7 @@ const projects = [
         description: 'A polished TypeScript digital studio website focused on clear visual storytelling, responsive layouts, and a refined frontend experience.',
         image: '/acyuta-digital-studio.png',
         tags: ['TypeScript', 'React', 'Tailwind CSS'],
-        live: 'https://acyuta-web-studio.vercel.app/',
+        live: 'https://acyutadigitalstudio.website',
         color: 'bg-[#a49bbd]'
     },
     {
@@ -64,13 +64,14 @@ function Project () {
             </header>
 
             <div className='grid gap-5 md:grid-cols-2'>
-                { projects.map(project => (
-                    <article key={ project.title } className='group overflow-hidden rounded-3xl border border-white/10 bg-[#1a1917] transition duration-300 hover:-translate-y-1.5 hover:border-white/30'>
-                        <a href={ project.live } target='_blank' rel='noreferrer' className={ `relative block overflow-hidden p-3 sm:p-4 ${ project.color }` }>
-                            <img src={ project.image } alt={ `${ project.title } project preview` } className='aspect-[1.55] w-full rounded-xl object-cover object-top transition duration-500 group-hover:scale-[1.025]' />
-                            <span className='absolute bottom-6 right-6 grid h-11 w-11 place-items-center rounded-full bg-[#171713] text-[#a3b47a] transition group-hover:rotate-45'><ArrowUpRight size={ 19 } /></span>
+                { projects.map((project, index) => (
+                    <article key={ project.title } className={ `group overflow-hidden rounded-3xl border border-white/[.08] bg-[#1a1917] transition duration-300 hover:-translate-y-1 hover:border-white/20 ${ index === 0 ? 'md:col-span-2 md:grid md:grid-cols-2' : '' }` }>
+                        <a href={ project.live } target='_blank' rel='noreferrer' className={ `relative block overflow-hidden ${ index === 0 ? 'min-h-64 bg-[#11100f] md:min-h-[360px]' : '' }` }>
+                            <img src={ project.image } alt={ `${ project.title } project preview` } className={ `w-full transition duration-500 group-hover:scale-[1.025] ${ index === 0 ? 'aspect-[1.55] object-contain object-center md:absolute md:inset-0 md:h-full' : 'aspect-[1.55] object-cover object-top' }` } />
+                            <span className={ `absolute left-5 top-5 h-1 w-10 rounded-full ${ project.color }` }></span>
+                            <span className='absolute bottom-4 right-4 grid h-11 w-11 place-items-center rounded-full bg-[#171713]/90 text-[#a3b47a] shadow-lg shadow-black/20 transition group-hover:rotate-45'><ArrowUpRight size={ 19 } /></span>
                         </a>
-                        <div className='p-5 sm:p-7'>
+                        <div className={ `p-5 sm:p-7 ${ index === 0 ? 'flex flex-col justify-center lg:p-10' : '' }` }>
                             <p className='text-[10px] font-bold uppercase tracking-[.16em] text-[#a3b47a]'>{ project.type }</p>
                             <div className='mt-2 flex items-start justify-between gap-3'>
                                 <h2 className='text-2xl font-extrabold tracking-tight sm:text-3xl'>{ project.title }</h2>

@@ -4,7 +4,7 @@ import { ArrowDownRight, ArrowUpRight, FileDown, MapPin, Sparkles } from 'lucide
 
 const featuredProjects = [
     { name: 'SidBites', category: 'FULL-STACK / NEXT.JS', image: '/SidBites.png', link: 'https://sid-bites.vercel.app', color: 'bg-[#d47c60]' },
-    { name: 'Acyuta Digital Studio', category: 'TYPESCRIPT / CREATIVE', image: '/acyuta-digital-studio.png', link: 'https://acyuta-web-studio.vercel.app/', color: 'bg-[#a49bbd]' },
+    { name: 'Acyuta Digital Studio', category: 'TYPESCRIPT / CREATIVE', image: '/acyuta-digital-studio.png', link: 'https://acyutadigitalstudio.website', color: 'bg-[#a49bbd]' },
     { name: 'TaskHub', category: 'NEXT.JS / PRODUCTIVITY', image: '/Landing.png', link: 'https://task-hub-lyart-psi.vercel.app', color: 'bg-[#a3b47a]' }
 ];
 
@@ -69,14 +69,15 @@ function Home () {
                     <div><p className='text-xs font-bold uppercase tracking-[.18em] text-[#a3b47a]'>A few things out in the world</p><h2 className='mt-3 text-5xl font-extrabold leading-none tracking-[-.08em] sm:text-7xl'>Selected <span className='font-serif font-medium italic text-[#a3b47a]'>work.</span></h2></div>
                     <NavLink to='/project' className='group inline-flex items-center gap-2 rounded-full border border-white/20 px-5 py-3 text-xs font-bold transition hover:border-[#a3b47a] hover:text-[#a3b47a]'>All five projects <ArrowUpRight size={ 16 } className='transition group-hover:rotate-45' /></NavLink>
                 </div>
-                <div className='grid gap-4 md:grid-cols-2 lg:grid-cols-3'>
-                    { featuredProjects.map(project => (
-                        <a key={ project.name } className='group overflow-hidden rounded-[1.4rem] border border-white/10 bg-[#1a1917] transition duration-300 hover:-translate-y-2 hover:border-white/30' href={ project.link } target='_blank' rel='noreferrer'>
-                            <div className={ `relative overflow-hidden p-3 ${ project.color }` }>
-                                <img src={ project.image } alt={ `${ project.name } project preview` } className='aspect-[1.3] w-full rounded-xl object-cover object-top transition duration-500 group-hover:scale-[1.04]' />
-                                <span className='absolute bottom-6 right-6 grid h-11 w-11 place-items-center rounded-full bg-[#a3b47a] text-[#171713] transition group-hover:rotate-45'><ArrowUpRight size={ 19 } /></span>
+                <div className='grid gap-4 md:grid-cols-2 lg:grid-cols-12 lg:grid-rows-2'>
+                    { featuredProjects.map((project, index) => (
+                        <a key={ project.name } className={ `group relative flex flex-col overflow-hidden rounded-[1.4rem] border border-white/[.08] bg-[#1a1917] transition duration-300 hover:-translate-y-1 hover:border-white/20 ${ index === 0 ? 'md:col-span-2 lg:col-span-7 lg:row-span-2 lg:min-h-[640px]' : 'lg:col-span-5' }` } href={ project.link } target='_blank' rel='noreferrer'>
+                            <div className={ `relative overflow-hidden ${ index === 0 ? 'aspect-[1.65] bg-[#11100f] md:aspect-[1.5] lg:aspect-[1.3]' : 'aspect-[1.55] lg:aspect-[2.4]' }` }>
+                                <img src={ project.image } alt={ `${ project.name } project preview` } className={ `h-full w-full transition duration-500 group-hover:scale-[1.035] ${ index === 0 ? 'object-contain object-center' : 'object-cover object-top' }` } />
+                                <span className={ `absolute left-5 top-5 h-1 w-10 rounded-full ${ project.color }` }></span>
+                                <span className='absolute bottom-4 right-4 grid h-11 w-11 place-items-center rounded-full bg-[#a3b47a] text-[#171713] shadow-lg shadow-black/20 transition group-hover:rotate-45'><ArrowUpRight size={ 19 } /></span>
                             </div>
-                            <div className='flex items-end justify-between gap-3 p-5'>
+                            <div className='flex items-end justify-between gap-3 p-5 sm:p-6'>
                                 <div><p className='text-[10px] font-bold tracking-[.15em] text-white/40'>{ project.category }</p><h3 className='mt-2 text-xl font-extrabold tracking-tight sm:text-2xl'>{ project.name }</h3></div>
                                 <ArrowDownRight className='mb-1 shrink-0 text-white/35 transition group-hover:translate-x-1 group-hover:translate-y-1 group-hover:text-[#a3b47a]' />
                             </div>

@@ -90,10 +90,10 @@ function Skills () {
 
             <div className='grid gap-5 lg:grid-cols-4'>
                 { skillGroups.map(({ title, description, icon: Icon, skills }) => (
-                    <section key={ title } className='rounded border border-white/10 bg-[rgba(29,27,25,.78)] p-6 shadow-[0_1.5rem_4rem_rgba(0,0,0,.15)] sm:p-7'>
+                    <section key={ title } className='group rounded-3xl border border-white/10 bg-[rgba(29,27,25,.78)] p-6 shadow-[0_1.5rem_4rem_rgba(0,0,0,.15)] transition duration-300 hover:-translate-y-1 hover:border-[#a3b47a]/50 sm:p-7'>
                         <div className='mb-8 flex items-start justify-between'><div><p className='mb-2 font-mono text-xs uppercase tracking-[.14em] text-[#a3b47a]'>{ title }</p><p className='max-w-xs text-sm leading-6 text-[#a9a29a]'>{ description }</p></div>{ React.createElement(Icon, { className: 'text-[#a49bbd]', size: 25 }) }</div>
                         <div className='grid grid-cols-2 gap-2'>
-                            { skills.map(([ name, icon ]) => <div key={ name } className='flex min-h-20 flex-col items-center justify-center gap-2 border border-white/8 bg-[#171615] px-2 py-3 text-center transition-colors hover:border-[#a3b47a]/60'>{ renderSkillIcon(icon) }<span className='text-xs text-[#d6d0c8]'>{ name }</span></div>) }
+                            { skills.map(([ name, icon ]) => <div key={ name } className='flex min-h-20 flex-col items-center justify-center gap-2 rounded-xl border border-white/8 bg-[#171615] px-2 py-3 text-center transition duration-200 hover:-translate-y-0.5 hover:border-[#a3b47a]/60 hover:bg-[#a3b47a]/[.06]'>{ renderSkillIcon(icon) }<span className='text-xs text-[#d6d0c8]'>{ name }</span></div>) }
                         </div>
                     </section>
                 )) }
@@ -102,7 +102,7 @@ function Skills () {
             <section className='mt-6 grid gap-6 border-y border-white/10 py-10 lg:grid-cols-[.8fr_1.2fr] lg:items-center'>
                 <div><div className='mb-4 flex items-center gap-3'><BookOpen className='text-[#a49bbd]' size={ 23 } /><p className='font-mono text-xs uppercase tracking-[.14em] text-[#a49bbd]'>Currently learning</p></div><h2 className='text-3xl font-bold'>Still curious.<br /><span className='font-serif font-medium italic text-[#a3b47a]'>Always.</span></h2><p className='mt-4 max-w-sm leading-7 text-[#a9a29a]'>The best work comes from staying open to better tools, deeper fundamentals, and new ways to solve familiar problems.</p></div>
                 <div className='grid grid-cols-2 gap-3 sm:grid-cols-3'>
-                    { learning.map(([ name, icon ]) => <div key={ name } className='flex items-center gap-3 border border-[#a49bbd]/25 bg-[#a49bbd]/5 p-4'><i className={ `${ icon } text-2xl` } aria-hidden='true'></i><span className='text-sm text-[#d6d0c8]'>{ name }</span></div>) }
+                    { learning.map(([ name, icon ]) => <div key={ name } className='flex items-center gap-3 rounded-xl border border-[#a49bbd]/25 bg-[#a49bbd]/5 p-4 transition hover:border-[#a49bbd]/60 hover:bg-[#a49bbd]/10'><i className={ `${ icon } text-2xl` } aria-hidden='true'></i><span className='text-sm text-[#d6d0c8]'>{ name }</span></div>) }
                 </div>
             </section>
 

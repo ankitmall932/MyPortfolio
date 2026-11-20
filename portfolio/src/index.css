@@ -4,6 +4,7 @@
 :root {
   font-family: 'Manrope', sans-serif;
   color: #f4f0e8;
+  color-scheme: dark;
   background: #11100f;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -18,14 +19,18 @@ body {
   min-width: 320px;
   overflow-x: clip;
   background:
-    radial-gradient(ellipse at 82% 7%, rgba(163, 180, 122, .06), transparent 34rem),
-    radial-gradient(ellipse at 3% 55%, rgba(164, 155, 189, .05), transparent 30rem),
+    radial-gradient(ellipse at 82% 7%, rgba(163, 180, 122, .09), transparent 34rem),
+    radial-gradient(ellipse at 3% 55%, rgba(164, 155, 189, .07), transparent 30rem),
     #11100f;
 }
 
 button, a, input, textarea { font: inherit; }
 a { color: inherit; text-decoration: none; }
 button { cursor: pointer; }
+img { display: block; max-width: 100%; }
+h1, h2, h3 { text-wrap: balance; }
+::selection { color: #171713; background: #a3b47a; }
+:focus-visible { outline: 2px solid #a3b47a; outline-offset: 4px; }
 
 .site-main {
   min-height: calc(100vh - 76px);
@@ -40,20 +45,21 @@ button { cursor: pointer; }
 .green { color: #91b49b; }
 
 .surface {
-  background: rgba(29, 27, 25, .78);
+  background: linear-gradient(145deg, rgba(35, 33, 30, .9), rgba(24, 23, 21, .85));
   border: 1px solid rgba(244, 240, 232, .12);
-  border-radius: 4px;
+  border-radius: 1.5rem;
   box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, .18);
+  backdrop-filter: blur(14px);
 }
 
 .card {
   background: linear-gradient(145deg, rgba(163, 180, 122, .12), rgba(255, 255, 255, .025));
   border: 1px solid rgba(163, 180, 122, .25);
-  border-radius: 4px;
+  border-radius: 1.25rem;
   padding: 1px;
   transition: transform .3s ease, border-color .3s ease, box-shadow .3s ease;
 }
-.card2 { height: 100%; border-radius: 3px; background: #1d1b19; padding: 1.75rem; }
+.card2 { height: 100%; border-radius: calc(1.25rem - 1px); background: #1d1b19; padding: 1.75rem; }
 .card:hover { border-color: rgba(163, 180, 122, .8); box-shadow: 0 1rem 2.5rem rgba(0, 0, 0, .25); transform: translateY(-4px); }
 
 .button-primary, .button-ghost {
@@ -82,43 +88,11 @@ input:focus, textarea:focus { border-color: #a3b47a !important; box-shadow: 0 0 
   .display { font-size: clamp(3rem, 16vw, 5rem); }
 }
 
+@media (max-width: 380px) {
+  .site-main { padding-inline: .85rem; }
+}
+
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
 }
 
-#oopss {
-  background: #11100f;
-  position: fixed;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  line-height: 1.5em;
-  z-index: 9999;
-}
-#oopss #error-text {
-  font-size: 40px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  font-family: 'Shabnam', Tahoma, sans-serif;
-  color: #f4f0e8;
-  direction: rtl;
-}
-#oopss #error-text img { margin: 85px auto 20px; height: 342px; }
-#oopss #error-text span { position: relative; font-size: 3.3em; font-weight: 900; margin-bottom: 50px; }
-#oopss #error-text p.p-a { font-size: 19px; margin: 30px 0 15px; }
-#oopss #error-text p.p-b { font-size: 15px; }
-#oopss #error-text .back {
-  background: #a3b47a;
-  color: #171713;
-  font-size: 30px;
-  text-decoration: none;
-  margin: 2em auto 0;
-  padding: .7em 2em;
-  border-radius: 500px;
-  box-shadow: 0 20px 70px 4px rgba(0, 0, 0, .1);
-  font-weight: 900;
-  transition: all 300ms ease;
-}
-#oopss #error-text .back:hover { transform: translateY(-13px); box-shadow: 0 35px 90px 4px rgba(0, 0, 0, .3), inset 0 0 0 3px #171713; }
