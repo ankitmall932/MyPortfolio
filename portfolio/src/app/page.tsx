@@ -11,7 +11,7 @@ export const metadata = {
 const featuredProjects = [
   { name: "SidBites", category: "FULL-STACK / NEXT.JS", image: "/SidBites.png", link: "https://sid-bites.vercel.app", color: "bg-[#d47c60]", alt: "SidBites full-stack Next.js food ordering project by Ankit Mall" },
   { name: "Acyuta Digital Studio", category: "TYPESCRIPT / CREATIVE", image: "/acyuta-digital-studio.png", link: "https://acyutadigitalstudio.website", color: "bg-[#a49bbd]", alt: "Acyuta Digital Studio Next.js web design project by Ankit Mall" },
-  { name: "TaskHub", category: "NEXT.JS / PRODUCTIVITY", image: "/landing.png", link: "https://task-hub-lyart-psi.vercel.app", color: "bg-[#a3b47a]", alt: "TaskHub Next.js productivity and task management project by Ankit Mall" }
+  { name: "TaskHub", category: "NEXT.JS / PRODUCTIVITY", image: "/TaskHub.png", link: "https://task-hub-lyart-psi.vercel.app", color: "bg-[#a3b47a]", alt: "TaskHub Next.js productivity and task management project by Ankit Mall" }
 ];
 
 export default function Home() {
