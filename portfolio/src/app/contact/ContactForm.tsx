@@ -5,6 +5,7 @@ import type { FormEvent } from "react";
 import emailjs from "@emailjs/browser";
 import Instagram from "@mui/icons-material/Instagram";
 import GitHub from "@mui/icons-material/GitHub";
+import LinkedIn from "@mui/icons-material/LinkedIn";
 import WhatsApp from "@mui/icons-material/WhatsApp";
 import { ArrowUpRight, Mail, MapPin, Phone, Send } from "lucide-react";
 
@@ -45,6 +46,7 @@ export default function ContactForm() {
           <div className="mt-5 flex gap-3 border-t border-white/10 pt-5">
             <a href="https://www.instagram.com/ankit_mall_932" target="_blank" rel="noreferrer" aria-label="Instagram" className="grid h-11 w-11 place-items-center rounded-xl border border-white/10 text-white/60 transition hover:border-[#d47c60]/50 hover:text-[#d47c60]"><Instagram fontSize="small" /></a>
             <a href="https://github.com/ankitmall932" target="_blank" rel="noreferrer" aria-label="GitHub" className="grid h-11 w-11 place-items-center rounded-xl border border-white/10 text-white/60 transition hover:border-[#a3b47a]/50 hover:text-[#a3b47a]"><GitHub fontSize="small" /></a>
+            <a href="https://www.linkedin.com/in/ankitmall932" target="_blank" rel="noreferrer" aria-label="LinkedIn" className="grid h-11 w-11 place-items-center rounded-xl border border-white/10 text-white/60 transition hover:border-[#77a9d6]/50 hover:text-[#77a9d6]"><LinkedIn fontSize="small" /></a>
             <a href="https://wa.me/919305617987" target="_blank" rel="noreferrer" aria-label="WhatsApp" className="grid h-11 w-11 place-items-center rounded-xl border border-white/10 text-white/60 transition hover:border-[#a3b47a]/50 hover:text-[#a3b47a]"><WhatsApp fontSize="small" /></a>
           </div>
         </section>
