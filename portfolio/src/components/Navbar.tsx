@@ -21,8 +21,8 @@ export default function Navbar() {
   return (
     <>
       <header className="fixed left-0 right-0 top-0 z-50 px-3 pt-3 sm:px-5 sm:pt-4">
-        <nav aria-label="Main navigation" className="mx-auto grid w-full max-w-310 grid-cols-[1fr_auto_1fr] items-center gap-3 rounded-full border border-white/10 bg-[#151412]/90 px-3 py-2 shadow-2xl shadow-black/20 backdrop-blur-2xl sm:px-5">
-          <Link href="/" onClick={() => setIsOpen(false)} className="group flex items-center gap-2.5">
+        <nav aria-label="Main navigation" className="mx-auto grid w-full max-w-310 grid-cols-[1fr_auto] items-center gap-3 rounded-full border border-white/10 bg-[#151412]/90 px-3 py-2 shadow-2xl shadow-black/20 backdrop-blur-2xl sm:grid-cols-[1fr_auto_1fr] sm:px-5">
+          <Link href="/" onClick={() => setIsOpen(false)} className="group flex min-w-0 items-center gap-2.5">
             <span className="grid h-9 w-9 place-items-center rounded-xl bg-[#a3b47a] text-xs font-black text-[#171713] transition group-hover:rotate-6">AM</span>
             <span className="text-sm font-extrabold tracking-tight">Ankit Mall<span className="text-[#a3b47a]">.</span></span>
           </Link>
